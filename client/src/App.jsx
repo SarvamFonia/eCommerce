@@ -37,9 +37,17 @@ function App() {
   return (
     <>
       <div className='flex flex-col overflow-x-hidden bg-white'>
-        <h1>Header component</h1>
+        {/* <h1>Header component</h1> */}
 
         <Routes>
+        <Route path='/' element={
+            <CheckAuth isAuthenticated={isAuthenticated} user={user} isLoading={isLoading}>
+              <Layout />
+            </CheckAuth>
+          }>
+            <Route path='login' element={<Login />}></Route>
+            <Route path='register' element={<Register />}></Route>
+          </Route>
           <Route path='/auth' element={
             <CheckAuth isAuthenticated={isAuthenticated} user={user} isLoading={isLoading}>
               <Layout />
