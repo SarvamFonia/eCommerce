@@ -4,7 +4,7 @@ import { Label } from '../ui/label'
 import { CloudUpload, FileIcon, XIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 import axios from 'axios'
-import SkeletonFileUpload from '../comman/skeleton/skeletonFileUpload'
+import SkeletonFileUpload from '../comman/skeleton/SkeletonFileUpload'
 import { SERVER_URL } from '@/config/config'
 
 const ImageUpload = ({ file, setFile, uploadedImageUrl, setUploadedImageUrl, imageLoadingState, setImageLoadingState, isEditMode }) => {
