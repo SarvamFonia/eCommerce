@@ -5,6 +5,7 @@ import { CloudUpload, FileIcon, XIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 import axios from 'axios'
 import SkeletonFileUpload from '../comman/skeleton/skeletonFileUpload'
+import { SERVER_URL } from '@/config/config'
 
 const ImageUpload = ({ file, setFile, uploadedImageUrl, setUploadedImageUrl, imageLoadingState, setImageLoadingState, isEditMode }) => {
 
@@ -38,7 +39,7 @@ const ImageUpload = ({ file, setFile, uploadedImageUrl, setUploadedImageUrl, ima
         setImageLoadingState(true)
         const data = new FormData();
         data.append('my_file', file);
-        const response = await axios.post('http://localhost:5000/api/admin/products/upload-image', data);
+        const response = await axios.post(`${SERVER_URL}/admin/products/upload-image`, data);
         console.log(response)
         if (response?.data?.success) {
             setUploadedImageUrl(response?.data?.result?.url)
