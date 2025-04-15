@@ -1,5 +1,6 @@
 import CategoryFilter from '@/components/shopping-view/CategoryFilter'
-import ProductDetailsModal from '@/components/shopping-view/productDetailsModal'
+import ProductDetailsModal from '@/components/shopping-view/ProductDetailsModal'
+// import ProductDetailsModal from '@/components/shopping-view/productDetailsModal'
 import ShoppingProductTile from '@/components/shopping-view/ShoppingProductTile'
 import { Button } from '@/components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
