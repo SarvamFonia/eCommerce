@@ -10,6 +10,9 @@ const initialState = {
 
 export const registerUser = createAsyncThunk('/auth/register', async (formData) => {
     const response = await axios.post(`${SERVER_URL}/auth/register`, formData, {
+        headers: {
+            'Content-Type': 'application/json'
+        },
         withCredentials: true
     });
     // console.log(response.data)
@@ -18,6 +21,9 @@ export const registerUser = createAsyncThunk('/auth/register', async (formData) 
 
 export const loginUser = createAsyncThunk('/auth/login', async (formData) => {
     const response = await axios.post(`${SERVER_URL}/auth/login`, formData, {
+        headers: {
+            'Content-Type': 'application/json'
+        },
         withCredentials: true
     });
     // console.log(response.data)
