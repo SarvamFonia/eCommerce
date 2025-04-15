@@ -52,6 +52,8 @@ app.use((req, res, next) => {
     next();
 });
 
+
+
 app.use('/api/auth', authRouter)
 app.use('/api/admin/products', adminProductsRouter)
 app.use('/api/shop/products', shopProductsRouter)
@@ -60,6 +62,12 @@ app.use('/api/shop/address', shopAddressRoute)
 app.use('/api/shop/order', shopOrderRoute)
 app.use('/api/admin/orders',adminOrderRouter)
 app.use('/api/shop/search',searchRouter)
+app.get('/', async(req,res) => {
+    res.status(200).json({
+        success: true,
+        message: "Successful connection"
+    })
+})
 
 app.listen(PORT, () => {
     console.log(`Server listining on PORT ${PORT}`)
