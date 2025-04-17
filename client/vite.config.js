@@ -21,10 +21,15 @@ export default defineConfig({
         {
           src: 'public/_headers', // where your _headers file is
           dest: 'dist'               // copy to root of dist/
+        },
+        {
+          src: 'public/redirects', // where your _headers file is
+          dest: 'dist'               // copy to root of dist/
         }
       ]
     }),
   ],
+  base: "/",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
