@@ -23,7 +23,7 @@ export default defineConfig({
           dest: 'dist'               // copy to root of dist/
         },
         {
-          src: 'public/redirects', // where your _headers file is
+          src: 'public/_redirects', // where your _headers file is
           dest: 'dist'               // copy to root of dist/
         }
       ]
