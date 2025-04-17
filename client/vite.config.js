@@ -16,18 +16,18 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'public/_headers', // where your _headers file is
-          dest: 'dist'               // copy to root of dist/
-        },
-        {
-          src: 'public/_redirects', // where your _headers file is
-          dest: 'dist'               // copy to root of dist/
-        }
-      ]
-    }),
+    // viteStaticCopy({
+    //   targets: [
+    //     {
+    //       src: 'public/_headers', // where your _headers file is
+    //       dest: 'dist'               // copy to root of dist/
+    //     },
+    //     {
+    //       src: 'public/_redirects', // where your _headers file is
+    //       dest: 'dist'               // copy to root of dist/
+    //     }
+    //   ]
+    // }),
   ],
   base: "/",
   resolve: {
